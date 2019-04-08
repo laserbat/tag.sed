@@ -1,6 +1,6 @@
 # Universal computation from repeated substitution
 
-If you ever tried to code something complex with `sed`, you probably know that it has labels and jumps that you can use to code some pretty interesting things. 
+If you ever tried to code something complex with `sed`, you probably know that it has labels and jumps that you can use to do some pretty interesting things. 
 
 For example, you can use 
 
@@ -15,7 +15,6 @@ Both of these examples are relatively complex: they use multiple loops/gotos and
 Tag systems
 ----
 
-
 [Tag systems](https://en.wikipedia.org/wiki/Tag_system#Cyclic_tag_systems) are very simple models of computation. Despite their simplicity, they can be Turing-complete, which means that they are able to simulate any Turing machine. 
 
 A tag system has a word that it operates on and a list of production rules. Each production rule associates a single symbol with a word. Each symbol used must have a production rule associated with it, unless it's a halting symbol.
@@ -29,4 +28,3 @@ We can simulate a single step of a m-tag system with the following algorithm:
 If we reach a point where this word becomes shorter than m or it starts with a halting symbol we can say that tag system has halted. 
 
 It's important to note that if `m > 1`, m-tag system is Turing-complete. Since 2-tag systems are the simplest Turing-complete tag systems, I'll focus mainly on them. I'll also talk about cyclic tag systems, which are also very simple, though they behave in a slightly different way.
-
