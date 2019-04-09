@@ -28,3 +28,21 @@ We can simulate a single step of a m-tag system with the following algorithm:
 If we reach a point where this word becomes shorter than m or it starts with a halting symbol we can say that tag system has halted. 
 
 It's important to note that if `m > 1`, m-tag system is Turing-complete. Since 2-tag systems are the simplest Turing-complete tag systems, I'll focus mainly on them. I'll also talk about cyclic tag systems, which are also very simple, though they behave in a slightly different way.
+
+Results
+---
+
+    # Any 2-tag system
+    s/^(.).(\w*)!(.*\1:(\w*).*)/\2\4!\3/
+
+    # Any 3 neighbor 2D CA or something like (1/3)-tag system
+    s/^(.(..))(\w*)#(.*\1:(\w+).*)/\2\3\5#\4/
+
+    # Wolfram's rule 110 with fixed size world
+    s/(^(0) 1(11)| 0(1)| (.))(.*)/\2 \3\4\6\5\4\2/
+
+    # Cyclic tag system
+    s/^(0(\w+)!(\w*)|1(\w+)!(\w*))!(.*)!/\2\4\5!\6!\3\5!/
+
+    # Wolfram's rule 110 with expanding world
+    s/(^(0) (q)|^(0) 1(11)| 0(1)| (.))(.*)/\2\4 \5\6\8\7\6\4\3\2/
