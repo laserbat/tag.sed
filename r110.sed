@@ -11,7 +11,7 @@
 # s/(^(0) (q)|^(0) 1(11)| 0(1)| (.))(.*)/\2\4 \5\6\8\7\6\4\3\2/
 
 # Variation of code below but using backrefs, can be used to 
-# simulate any 3 neighbor 2D CA.
+# simulate any 3 neighbor 1D CA.
 # Input:
 # <world>#<rule1>:<w1> <rule2>:<w2> ... <ruleN>:<wN>
 # Where ruleN is any 3 symbols and wN is any word (including empty)
